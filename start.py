@@ -8,11 +8,14 @@ import re
 import json
 import aiohttp
 import asyncio
-import datetime
+from datetime import datetime, timedelta
 from collections import deque, defaultdict
 from keep_alive import keep_alive
 
+
+
 import discord
+from discord import app_commands
 from discord.ext import commands, tasks
 from dotenv import load_dotenv
 
@@ -1194,5 +1197,7 @@ bot.add_command(commands.Command(clear_cmd.callback, name="purge"))
 # ============================================================
 #  [RUN] Lancement
 # ============================================================
+
+
 keep_alive()
 bot.run(TOKEN)
