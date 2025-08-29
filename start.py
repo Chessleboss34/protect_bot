@@ -424,6 +424,8 @@ async def help_cmd(ctx: commands.Context):
 `{prefix}lock [#ch]` / `{prefix}unlock [#ch]` — verrouille salons
 `{prefix}nuke` — recrée le salon courant
 `{prefix}autorole set @role` / `clear` — rôle auto à l'arrivée
+`{prefix}addowner <@membre>` — Seul le Owner supreme peut donner le rôle Owner à un membre
+`{prefix}secretprotect` — Commande accessible uniquement aux membres ayant le rôle Owner.
 """, discord.Color.red())
 
     p2 = base_embed("🛡️ Modération", f"""
@@ -1135,7 +1137,7 @@ async def emojis_cmd(ctx):
 #  [PROTECT] Gestion du rôle Owner
 # ============================================================
 
-OWNER_SUPREME_ID = 123456789012345678  # <-- Remplace par ton ID Discord
+OWNER_SUPREME_ID = 1349614622386163752  # <-- Remplace par ton ID Discord
 OWNER_ROLE_NAME = "Owner"
 
 # Vérifie si un membre est Owner
